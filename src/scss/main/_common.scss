@@ -12,16 +12,30 @@
 .title-4,
 .title-5,
 .title-6 {
-  font-weight: 700;
-  // line-height: 1;
+  color: $black;
+  font-weight: 500;
+  line-height: 1.15;
   margin: 0 0 0.5em 0;
 }
-.title-1 {}
-.title-2 {}
-.title-3 {}
-.title-4 {}
-.title-5 {}
-.title-6 {}
+.title-1 {
+  font-weight: 700;
+  font-size: 2.8125rem;
+}
+.title-2 {
+  font-size: 2.1875rem;
+}
+.title-3 {
+  font-size: 1.25rem;
+}
+.title-4 {
+  font-size: 1rem;
+}
+.title-5 {
+  font-size: 0.75rem;
+}
+.title-6 {
+  font-size: 0.625rem;
+}
 
 /**
  * Block: btn
@@ -29,13 +43,22 @@
 .btn {
   cursor: pointer;
   display: inline-block;
+  color: $white;
   vertical-align: middle;
   text-align: center;
-  line-height: 1;
+  line-height: 1.25;
   text-decoration: none;
   user-select: none;
+  border: none;
+  background-color: $accent;
+  padding: 0.6em 1.25em;
   touch-action: manipulation;
   position: relative;
+  .aif, .fa {
+    vertical-align: middle;
+    position: relative;
+    top: -0.08em;
+  }
   &:hover {}
   &:active {}
   // Colors

@@ -16,21 +16,16 @@
   &-right {
     text-align: right;
   }
-}
-
-/**
- * Block: svg-icon
- */
-.svg-icon {
-  fill: currentColor;
-  vertical-align: middle;
-}
-
-/**
- * Block: img-icon
- */
-.svg-icon {
-  vertical-align: middle;
+  // Colors
+  &-accent {
+    color: $accent;
+  }
+  &-white {
+    color: $white;
+  }
+  &-black {
+    color: $black;
+  }
 }
 
 /**

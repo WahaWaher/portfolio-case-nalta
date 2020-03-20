@@ -1,19 +1,21 @@
 // Colors
-$white: #fff;
-$black: #222;
-$grey: #bbb;
-$accent: #fa0;
-$primary: #fa0;
+$white: #fefefe;
+$black: #2e2b2c;
+$grey: #8c9392;
+$grey-light: #909090;
+$accent: #027466;
+$accent-light: #eff7f7;
+
+
 
 // Typography
-$app-font: 'Open Sans', sans-serif;
+$app-font: 'Roboto', sans-serif;
 $app-font-size: 16px;
-$app-line-height: 1.5;
+$app-line-height: 1.6;
 $app-font-weight: 400;
-$app-letter-spacing: normal; // 0.05em === 50(photoshop)/1000
 
 // Loader
-$app-loader-size-md: 50px;
+// $app-loader-size-md: 50px;
 
 // Transitions
 $trs: .15s;
