@@ -9,13 +9,13 @@ $sets = array(
 
 // Pages
 $pages = array(
-  'Home' => array(
-    'title' => 'Home',
+  'home' => array(
+    'title' => 'Главная',
     'description' => $sets['description'],
     'keywords' => $sets['keywords']
   ),
   '404' => array(
-    'title' => 'Page not found',
+    'title' => 'Страница не найдена',
     'description' => $sets['description'],
     'keywords' => $sets['keywords'],
   ),
@@ -28,4 +28,4 @@ if( isset($_GET['route']) ) {
     header('HTTP/1.0 404 Not Found');
     $page = '404';
   }
-} else $page = 'main';
+} else $page = 'home';

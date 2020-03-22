@@ -54,22 +54,67 @@
   padding: 0.6em 1.25em;
   touch-action: manipulation;
   position: relative;
+  transition: all $trs;
   .aif, .fa {
     vertical-align: middle;
     position: relative;
     top: -0.08em;
   }
-  &:hover {}
-  &:active {}
-  // Colors
-  // &_accent {
-  //   &:hover {}
-  //   &:active {}
-  // }
+  // btn_transparent
   &_transparent {
     color: $accent;
     border: .0625em solid $accent;
     background-color: transparent;
+    &:hover {
+      color: $white;
+      background-color: $accent;
+    }
+    &:active {}
+    &.btn_effect {
+      &_silent {
+        &:before {
+          background-color: $accent;
+        }
+        &:hover {
+          color: $white;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  // Effects
+  &_effect {
+    // btn_effect_silent
+    &_silent {
+      transform: translateZ(0);
+      overflow: hidden;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200%;
+        height: 200%;
+        transform: translate(-50%, -50%) scale(0);
+        transform-origin: center top;
+        background-color: rgba($white, .2);
+        border-radius: 50%;
+        z-index: -1;
+        transition: transform $trs * 1.5 ease-in-out;
+      }
+      &:hover {
+        &:before {
+          transform: translate(-50%, -50%) scale(1);
+          transform-origin: center bottom;
+        }
+      }
+      &:active {
+        &:before {
+          opacity: 0.9;
+        }
+      }
+    }
   }
   // Transformations
   &_wide {
@@ -219,22 +264,48 @@
 }
 
 /**
+ * Block: menu-simple
+ */
+.menu-simple {
+  line-height: 0;
+  &__list {
+    > li {
+      margin: 0.65em 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      > a {
+        display: inline-block;
+        line-height: 1.25;
+        text-decoration: none;
+        &:active {}
+      }
+      &.current-menu-item,
+      &:hover {
+        > a {
+          color: $accent;
+        }
+      }
+    }
+  }
+}
+
+/**
  * Block: contact-block-min
  */
 .contact-block-min {
   display: inline-block;
-  line-height: 0;
-  .aif, .fa, a, span {
-    display: inline-block;
-    vertical-align: middle;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: all $trs;
+  &:hover {
+    color: $black;
   }
-  .aif, .fa {
-    line-height: 0;
-    font-size: 0.85em;
-  }
-  a, span {
-    text-decoration: none;
-    line-height: 1;
+  &:active {
+    color: lighten($black, 20%);
   }
 }
 
@@ -250,9 +321,8 @@
   background-color: $accent-light;
   overflow-y: auto;
   z-index: 999;
-  // Simplae transition
   opacity: 0;
-  transition: all .35s ease-in-out;
+  transition: all $trs * 1.25 ease-in-out;
   box-shadow: 1px 5px 9.5px 0.5px rgba(#222, 0.06);
   &:before {
     content: '';

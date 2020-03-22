@@ -47,7 +47,7 @@ const config = {
     server: {
       // server: 'build',
       port: 8080,
-      proxy: 'nalta.loc',
+      proxy: 'nalta.build',
       browser: 'chrome',
       open: true,
       notify: false,
@@ -62,7 +62,7 @@ const config = {
       vendors: {
         min: true,
         maps: false,
-        separate: false,
+        separate: true,
       },
     },
     js: {
@@ -73,7 +73,7 @@ const config = {
       // vendor scripts
       vendors: {
         min: true,
-        separate: false,
+        separate: true,
       },
     },
   },

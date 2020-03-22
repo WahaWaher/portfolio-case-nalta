@@ -1,7 +1,7 @@
 <header class="app-header app-header_fixed">
 
   <!-- HeaderMain : Start -->
-  <div class="app-header-main">
+  <div class="app-header__main">
     <div class="container">
       <div class="row d-flex flex-nowrap align-items-center">
         <div class="col-auto flex-grow-1 flex-xl-grow-0">
@@ -26,7 +26,7 @@
         </div>
         <div class="col-auto d-none d-sm-block">
 
-          <button class="btn btn_transparent">
+          <button class="btn btn_transparent btn_effect_silent">
             <i class="aif aif-phone mr-1"></i>
             Заказать звонок
           </button>
@@ -47,7 +47,7 @@
   <!-- HeaderMain : End -->
 
   <!-- HeaderSub : Start -->
-  <div class="app-header-sub">
+  <div class="app-header__sub">
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="col-4 d-block d-xl-none">
@@ -79,18 +79,18 @@
           <div class="row justify-content-end">
             <div class="col-auto col-xl text-right">
 
-              <span class="contact-block-min text-nowrap">
-                <i class="contact-block-min__icon aif aif-mail mr-1"></i>
-                <a href="mailto:mail@gmail.com" title="Написать">mail@gmail.com</a>
-              </span>
+              <a class="contact-block-min text-nowrap" href="mailto:mail@gmail.com" title="Написать">
+                <i class="aif aif-mail mr-1"></i>
+                mail@gmail.com
+              </a>
 
             </div>
             <div class="col-auto col-xl text-right">
 
-              <span class="contact-block-min text-nowrap">
-                <i class="contact-block-min__icon aif aif-phone mr-1"></i>
-                <a href="tel:80297442412" title="Позвонить">8 (029) 744-24-12</a>
-              </span>
+              <a class="contact-block-min text-nowrap" href="tel:80297442412" title="Позвонить">
+                <i class="aif aif-phone mr-1"></i>
+                8 (029) 744-24-12
+              </a>
 
             </div>
           </div>

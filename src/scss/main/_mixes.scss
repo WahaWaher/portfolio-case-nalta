@@ -3,7 +3,7 @@
  */
 
 /**
- * Block: flex
+ * Mix: flex
  */
 .flex {
   &-grow-2 {
@@ -12,7 +12,7 @@
 }
 
 /**
- * Block: text
+ * Mix: text
  */
 .text {
   // Align
@@ -45,9 +45,38 @@
 }
 
 /**
- * Block: bg
+ * Mix: font
+ */
+.font {
+  &-weight {
+    &-light {
+      font-weight: 300;
+    }
+    &-normal {
+      font-weight: 400;
+    }
+    &-medium {
+      font-weight: 500;
+    }
+    &-bold {
+      font-weight: 700;
+    }
+  }
+}
+
+/**
+ * Mix: bg
  */
 .bg {
+  &-accent {
+    background-color: $accent;
+  }
+  &-accent-light {
+    background-color: $accent-light;
+  }
+  &-accent-extra-light {
+    background-color: $accent-extra-light;
+  }
   &-cover {
     background-repeat: no-repeat;
     background-position: center;
@@ -68,7 +97,7 @@
 }
 
 /**
- * Block: list-empty
+ * Mix: list-empty
  */
 .list-empty {
   list-style-type: none;
