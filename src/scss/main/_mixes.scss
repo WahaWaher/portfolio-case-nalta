@@ -3,6 +3,15 @@
  */
 
 /**
+ * Block: flex
+ */
+.flex {
+  &-grow-2 {
+    flex-grow: 2 !important;
+  }
+}
+
+/**
  * Block: text
  */
 .text {
@@ -25,6 +34,13 @@
   }
   &-black {
     color: $black;
+  }
+  // Other
+  &-nowrap {
+    white-space: nowrap;
+  }
+  &-middle {
+    vertical-align: middle;
   }
 }
 
@@ -49,4 +65,13 @@
 .img-contain {
   object-fit: contain;
   font-family: "object-fit: contain;";
+}
+
+/**
+ * Block: list-empty
+ */
+.list-empty {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }

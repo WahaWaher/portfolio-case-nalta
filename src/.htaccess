@@ -1,4 +1,21 @@
 AddDefaultCharset UTF-8
+php_flag display_errors ON
+php_value mbstring.internal_encoding UTF-8
+php_flag magic_quotes_gpc off
+php_flag magic_quotes_runtime off
+php_flag register_globals off
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/forum
+RewriteCond %{REQUEST_URI} !^/ckeditor
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
+
+AddDefaultCharset UTF-8
 AddCharset utf-8 .js .css .html
 
 # Client side browser caching
@@ -50,5 +67,3 @@ FileETag MTime Size
 <FilesMatch "\.(ttf|otf|woff|woff2|eot|svg)$" >
   SetOutputFilter DEFLATE
 </FilesMatch>
-
-ErrorDocument 404 /404.html

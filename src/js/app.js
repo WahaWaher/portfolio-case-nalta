@@ -1,5 +1,61 @@
 $(document).ready(function() {
   /**
+   * AppDrawer
+   */
+  (function () {
+
+    var $drawers = $('[data-drawer]');
+    var $swithes = $('[data-drawerToggle]');
+
+    $drawers.each(function(i, drawer) {
+      var $drawer = $(drawer);
+      var data = $drawer.data('drawer');
+      var options = {};
+  
+      if (typeof data === 'string') {
+        options.id = data;
+      } else if (typeof data === 'object' && typeof data !== null) {
+        options = data;
+      }
+  
+      var sets = $.extend(true, {}, {
+        // Defaults...
+        active: 'is-active',
+        open: '',
+        close: '',
+        autoClose: true, 
+      }, options);
+
+      var $switch = $('[data-drawerToggle="' + sets.id + '"');
+
+      drawer.drawer = {
+        open: function () {
+          if (sets.autoClose) {
+            $drawers.removeClass(sets.active);
+            $swithes.removeClass(sets.active);
+          }
+
+          $switch.addClass(sets.active);
+          $drawer.addClass(sets.active);
+        },
+        close: function () {
+          $switch.removeClass(sets.active);
+          $drawer.removeClass(sets.active);
+        }
+      };
+  
+      $('[data-drawerToggle="' + sets.id + '"').on('click', function() {
+        var isOpen = $drawer.hasClass('is-active');
+        if (isOpen) {
+          drawer.drawer.close();
+        } else {
+          drawer.drawer.open();
+        }
+      });
+    });
+  })();
+
+  /**
    * Animation on lazyloaded
    */
   $(document)
@@ -8,8 +64,13 @@ $(document).ready(function() {
     })
     .on('lazyloaded', function(e) {
       $(e.target).animateCSS('fadeIn', {
-        duration: 1000,
+        duration: 500,
         clear: true,
+        start: function () {
+          setTimeout(function () {
+            $(e.target).css('opacity', '');
+          }, 550);
+        },
         complete: function() {
           $(e.target).css('opacity', '');
         }

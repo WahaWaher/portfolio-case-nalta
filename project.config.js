@@ -7,9 +7,9 @@ const config = {
    */
   development: {
     server: {
-      server: 'src',
+      // server: 'src',
       port: 8000,
-      // proxy: 'gulp-common-template.loc',
+      proxy: 'nalta.loc',
       browser: 'chrome',
       open: false,
       notify: false,
@@ -45,9 +45,9 @@ const config = {
    */
   production: {
     server: {
-      server: 'build',
+      // server: 'build',
       port: 8080,
-      // proxy: 'gulp-common-template.loc',
+      proxy: 'nalta.loc',
       browser: 'chrome',
       open: true,
       notify: false,

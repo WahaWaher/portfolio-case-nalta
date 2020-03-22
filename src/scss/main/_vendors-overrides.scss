@@ -1,0 +1,12 @@
+/**
+ * Overrides
+ */
+.hamburger {
+  line-height: 0;
+  transition-duration: .2s;
+  .hamburger-inner {
+    &:before, &:after {
+      transition-duration: .2s;
+    }
+  }
+}
