@@ -1,17 +1,17 @@
 <footer class="app-footer">
 
   <!-- AppFooterMain : Start -->
-  <div class="app-footer__main">
+  <div class="app-footer__main deco-sct-city">
     <div class="container">
       <div class="row">
-        <div class="col-6 order-sm-0 col-lg-2 col-xl-2 mb-5">
+        <div class="col-6 order-sm-0 col-lg-2 col-xl-2 mb-5 mb-lg-0">
 
           <div class="logo-main">
             <img class="logo-main__img" src="svg/logo.svg" alt="nalta logo">
           </div>
 
         </div>
-        <div class="col-sm-6 order-lg-1 col-lg-3 col-xl-3 mb-5">
+        <div class="col-sm-6 order-lg-1 col-lg-3 col-xl-3 mb-5 mb-lg-0">
 
           <div class="title-3 mb-4">Заказать замер</div>
           <p class="font-weight-light">Оставьте ваши данные, мы Вам перезвоним в ближайшее время для согласования даты и времени замера</p>
@@ -74,9 +74,10 @@
           </a>
 
         </div>
-        
       </div>
     </div>
+    <!-- DecoCity -->
+    <img class="lazyload deco-sct-city__img" data-src="img/bg-city-rare_accent-light.png" src="img/bg-lazy.png" alt="deco city">
   </div>
   <!-- AppFooterMain : End -->
 

@@ -21,25 +21,26 @@
 </head>
 <body>
   <div class="app">
-    <!-- AppHeader : Start -->
-    <?php include('parts/header.php'); ?>
-    <!-- AppHeader : End -->
-  
-    <!-- AppPage : Start -->
-    <?php include ( 'pages/'.$page.'.php' ); ?>
-    <!-- AppPage : End -->
-  
-    <!-- AppFooter : Start -->
-    <?php include('parts/footer.php');?>
-    <!-- AppFooter : End -->
 
-    <!-- Drawers : Start -->
-    <?php include('parts/drawers.php');?>
-    <!-- Drawers : End -->
+<!-- AppHeader : Start -->
+<?php include('parts/header.php'); ?>
+<!-- AppHeader : End -->
 
-    <!-- Modals : Start -->
-    <?php include('parts/modals.php');?>
-    <!-- Modals : End -->
+<!-- AppPage : Start -->
+<?php include ( 'pages/'.$page.'.php' ); ?>
+<!-- AppPage : End -->
+
+<!-- AppFooter : Start -->
+<?php include('parts/footer.php');?>
+<!-- AppFooter : End -->
+
+<!-- Drawers : Start -->
+<?php include('parts/drawers.php');?>
+<!-- Drawers : End -->
+
+<!-- Modals : Start -->
+<?php include('parts/modals.php');?>
+<!-- Modals : End -->
     
     <div id="top-button"></div>
   </div>

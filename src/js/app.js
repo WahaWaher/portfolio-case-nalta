@@ -1,9 +1,62 @@
 $(document).ready(function() {
   /**
+   * SliderMain
+   */
+  var $sliderMain = $('[data-slider-main]');
+
+  $sliderMain.each(function(i, slider) {
+    var $slider = $(slider);
+    // Options
+    var options = $.extend(
+      true,
+      {},
+      {
+        // Default options...
+        items: 1,
+        autoHeight: true,
+        // loop: true,
+        // Navigation:
+        nav: true,
+        dots: true,
+        navText: [
+          '<i class="aif aif-arrow-check-left"></i>',
+          '<i class="aif aif-arrow-check-right"></i>'
+        ],
+        // Lazy:
+        //  lazyLoad: true,
+        //  lazyLoadEager: 0, // slides amount to preload (left/right)
+        // Animation:
+        smartSpeed: 250,
+        //  animateOut: '',
+        //  animateIn: '',
+        // Classes
+        navContainerClass: 'slider-nav slider-nav_main slider-nav_pos_center',
+        navClass: ['slider-nav__prev', 'slider-nav__next'],
+        dotsClass: 'slider-dots slider-dots_main',
+        dotClass: 'slider-dots__dot',
+        // Custom options:
+        ofi: {
+          watchMQ: true
+        }
+      },
+      $slider.data('owl')
+    );
+
+    $slider.on('changed.owl.carousel', function() {
+      // Refresh OFI
+      //  if (window.objectFitImages) {
+      //    objectFitImages(null, options.ofi);
+      //  }
+    });
+
+    // Init
+    $slider.owlCarousel(options);
+  });
+
+  /**
    * AppDrawer
    */
-  (function () {
-
+  (function() {
     var $drawers = $('[data-drawer]');
     var $swithes = $('[data-drawerToggle]');
 
@@ -11,25 +64,30 @@ $(document).ready(function() {
       var $drawer = $(drawer);
       var data = $drawer.data('drawer');
       var options = {};
-  
+
       if (typeof data === 'string') {
         options.id = data;
       } else if (typeof data === 'object' && typeof data !== null) {
         options = data;
       }
-  
-      var sets = $.extend(true, {}, {
-        // Defaults...
-        active: 'is-active',
-        open: '',
-        close: '',
-        autoClose: true, 
-      }, options);
+
+      var sets = $.extend(
+        true,
+        {},
+        {
+          // Defaults...
+          active: 'is-active',
+          open: '',
+          close: '',
+          autoClose: true
+        },
+        options
+      );
 
       var $switch = $('[data-drawerToggle="' + sets.id + '"');
 
       drawer.drawer = {
-        open: function () {
+        open: function() {
           if (sets.autoClose) {
             $drawers.removeClass(sets.active);
             $swithes.removeClass(sets.active);
@@ -38,12 +96,12 @@ $(document).ready(function() {
           $switch.addClass(sets.active);
           $drawer.addClass(sets.active);
         },
-        close: function () {
+        close: function() {
           $switch.removeClass(sets.active);
           $drawer.removeClass(sets.active);
         }
       };
-  
+
       $('[data-drawerToggle="' + sets.id + '"').on('click', function() {
         var isOpen = $drawer.hasClass('is-active');
         if (isOpen) {
@@ -66,8 +124,8 @@ $(document).ready(function() {
       $(e.target).animateCSS('fadeIn', {
         duration: 500,
         clear: true,
-        start: function () {
-          setTimeout(function () {
+        start: function() {
+          setTimeout(function() {
             $(e.target).css('opacity', '');
           }, 550);
         },
@@ -103,11 +161,10 @@ $(document).ready(function() {
 
             if (fx.end !== newDest) fx.end = newDest;
           },
-          complete: function () {
+          complete: function() {
             if (history.pushState) {
               history.pushState(null, null, selector);
-            }
-            else {
+            } else {
               location.hash = selector;
             }
           }
@@ -131,7 +188,7 @@ $(document).ready(function() {
 
   // Animate anchor scroll when page loaded
   if (location.hash) {
-    setTimeout(function () {
+    setTimeout(function() {
       scrollToSelector(location.hash);
     }, 250);
   }

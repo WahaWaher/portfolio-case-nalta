@@ -8,13 +8,16 @@
  */
 .sct {
   position: relative;
-  .sct__bg {
+  &__bg {
     display: block;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+  }
+  &_under-header {
+    padding-top: 115px + 62px + 62px !important;
   }
 }
 
@@ -69,7 +72,27 @@
 /**
  * Section: main-screen
  */
-.main-screen {
-  min-height: 450px; // !!!
+.sct-main-screen {
   background-color: #f5f5f5;
+  padding: 62px 0;
+  &__offer-main {
+    max-width: 630px;
+    padding: 60px 52px 52px 100px;
+  }
+}
+@include media-breakpoint-down(md) {
+  .sct-main-screen {
+    &__offer-main {
+      padding: 40px 55px;
+    }
+  }
+}
+@include media-breakpoint-down(xs) {
+  .sct-main-screen {
+    &__offer-main {
+      padding: 45px 15px;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
 }

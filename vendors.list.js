@@ -15,9 +15,13 @@ module.exports = {
     './node_modules/@fancyapps/fancybox/src/js/core.js',
     './node_modules/@fancyapps/fancybox/src/js/guestures.js',
   ],
+  // 'owl.carousel': './node_modules/owl.carousel/dist/owl.carousel.min.js'
   'owl.carousel.build': [
     './node_modules/owl.carousel/src/js/owl.carousel.js',
-    './node_modules/owl.carousel/src/js/owl.lazyload.js'
+    './node_modules/owl.carousel/src/js/owl.navigation.js',
+    './node_modules/owl.carousel/src/js/owl.animate.js',
+    './node_modules/owl.carousel/src/js/owl.autoheight.js',
+    // './node_modules/owl.carousel/src/js/owl.lazyload.js'
   ]
 };
 
