@@ -14,6 +14,26 @@ $pages = array(
     'description' => $sets['description'],
     'keywords' => $sets['keywords']
   ),
+  'category' => array(
+    'title' => 'Категория товара',
+    'description' => $sets['description'],
+    'keywords' => $sets['keywords']
+  ),
+  'product' => array(
+    'title' => 'Карточка продукта',
+    'description' => $sets['description'],
+    'keywords' => $sets['keywords']
+  ),
+  'policy' => array(
+    'title' => 'Политика конфиденциальности',
+    'description' => $sets['description'],
+    'keywords' => $sets['keywords']
+  ),
+  'thanks' => array(
+    'title' => 'Страница благодарности',
+    'description' => $sets['description'],
+    'keywords' => $sets['keywords']
+  ),
   '404' => array(
     'title' => 'Страница не найдена',
     'description' => $sets['description'],

@@ -1,0 +1,69 @@
+@import '../settings';
+
+/*!
+Magic (custom build) - Ver 1.1.0 - http://minimamente.com
+Licensed under the MIT license
+Copyright (c) 2014 Christian Pucci
+*/
+.rotateRight {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: rotateRight;
+  animation-name: rotateRight;
+}
+@-webkit-keyframes rotateRight {
+  0% {
+  	opacity: 1;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: perspective(800px) rotateY(0deg) translate3d(0px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0;
+    -webkit-transform: perspective(800px) rotateY(-180deg) translateZ(150px);
+  }
+}
+@keyframes rotateRight {
+  0% {
+  	opacity: 1;
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg) translate3d(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: 50% 0;
+    transform: perspective(800px) rotateY(-180deg) translateZ(150px);
+  }
+}
+.swap {
+  -webkit-animation-name: swap;
+  animation-name: swap;
+}
+@-webkit-keyframes swap {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: scale(0, 0) translate(-700px, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+    -webkit-transform: scale(1, 1) translate(0px, 0px);;
+  }
+}
+@keyframes swap {
+  0% {
+    opacity: 0;
+    transform-origin: 0 100%;
+    transform: scale(0, 0) translate(-700px, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scale(1, 1) translate(0px, 0px);
+  }
+}

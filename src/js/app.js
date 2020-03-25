@@ -1,11 +1,86 @@
 $(document).ready(function() {
   /**
+   * Fancybox basic options
+   */
+  $.fancybox.defaults = $.extend(true, {}, $.fancybox.defaults, {
+    idleTime: 5,
+    animationEffect: 'zoom',
+    animationDuration: 366,
+    transitionEffect: 'circular',
+    transitionDuration: 550,
+    animation: {
+      open: {
+        name: 'magictime swap',
+        duration: 500,
+        start: function () {
+          $(this).css('overflow', 'hidden');
+        },
+        complete: function () {
+          $(this).css('overflow', '');
+        }
+      },
+      close: {
+        name: 'magictime rotateRight',
+        duration: 750,
+        start: function () {
+          $(this).css('overflow', 'hidden');
+        },
+        complete: function () {
+          $(this).css('overflow', '');
+        }
+      },
+    },
+    // spinnerTpl: '<div class="loader loader_inline loader_fancybox is-active"></div>',
+    lang: 'ru',
+    i18n: {
+      'ru': {
+        CLOSE: 'Закрыть',
+        NEXT: 'Далее',
+        PREV: 'Назад',
+        ERROR: 'Не удалось загрузить содержимое.<br>Пожалуйста, попробуйте позже.',
+        PLAY_START: 'Запустить слайд-шоу',
+        PLAY_STOP: 'Остановить слайд-шоу',
+        FULL_SCREEN: 'На весь экран',
+        THUMBS: 'Миниатюры',
+        DOWNLOAD: 'Скачать',
+        SHARE: 'Поделиться',
+        ZOOM: 'Масштаб'
+      }
+    }
+  });
+
+  /**
+   * Rellax
+   */
+  $('.rellax-box img').each(function (key, item) {
+    item.rellax = new Rellax(item);
+  });
+
+  /**
+   * JCF
+   */
+  jcf.replace('.form-check', 'Checkbox');
+
+  $('.form-check').each(function (key, check) {
+    var $check = $(check);
+
+    $check.parents('.jcf-checkbox').addClass($check.attr('class'));
+  });
+  
+
+  // Animated input placeholder
+  $('.form-group_holder_default input').on('blur', function (e) {
+    $(this)[(e.target.value ? 'add' : 'remove') + 'Class']('is-not-empty');
+  }).trigger('blur');
+
+  /**
    * SliderMain
    */
   var $sliderMain = $('[data-slider-main]');
 
   $sliderMain.each(function(i, slider) {
     var $slider = $(slider);
+
     // Options
     var options = $.extend(
       true,
@@ -23,10 +98,10 @@ $(document).ready(function() {
           '<i class="aif aif-arrow-check-right"></i>'
         ],
         // Lazy:
-        //  lazyLoad: true,
-        //  lazyLoadEager: 0, // slides amount to preload (left/right)
+        lazyLoad: true,
+        lazyLoadEager: 1, // slides amount to preload (left/right)
         // Animation:
-        smartSpeed: 250,
+        smartSpeed: 350,
         //  animateOut: '',
         //  animateIn: '',
         // Classes
@@ -37,20 +112,57 @@ $(document).ready(function() {
         // Custom options:
         ofi: {
           watchMQ: true
-        }
+        },
+        onInitialized: function() {
+          $(this).fadeIn();
+        },
       },
       $slider.data('owl')
     );
 
-    $slider.on('changed.owl.carousel', function() {
+    var dataSync = $slider.data('sync') || '';
+
+    if (dataSync) {
+      var dataSync = $slider.data('sync') || '';
+      var syncVal = dataSync.split(':') || [];
+      var id = syncVal[0];
+      var role = syncVal[1];
+      var $syncSlider = $('[data-sync="'+ id + ':' + (role === 'main' ? "prev" : "main") +'"]');
+    }
+
+    // OWL: OnChanged
+    $slider.on('changed.owl.carousel', function(e) {
       // Refresh OFI
-      //  if (window.objectFitImages) {
-      //    objectFitImages(null, options.ofi);
-      //  }
+      if (window.objectFitImages) {
+        setTimeout(function () {
+          objectFitImages($(e.target).find('img'), options.ofi);
+        }, 0);
+      }
+
+      // Sync
+      if (dataSync && e.namespace && e.property.name === 'position') {
+        var target = e.relatedTarget.relative(e.property.value, true);
+
+        $syncSlider.owlCarousel('to', target);
+      }
     });
 
-    // Init
-    $slider.owlCarousel(options);
+    // OWL: OnInitialized
+    $slider.on('initialized.owl.carousel', function(e) {
+      // Refresh OFI
+      if (window.objectFitImages) {
+        setTimeout(function () {
+          objectFitImages($(e.target).find('img'), options.ofi);
+        }, 0);
+      }
+    });
+
+    // Stick owl options to element
+    slider.owlOptions = options;
+
+    // Init or Lazy
+    if (!$slider.hasClass('lazyload'))
+      $slider.owlCarousel(options);
   });
 
   /**
@@ -121,22 +233,37 @@ $(document).ready(function() {
       $(e.target).css('opacity', 0);
     })
     .on('lazyloaded', function(e) {
-      $(e.target).animateCSS('fadeIn', {
+      var $target = $(e.target);
+
+      $target.animateCSS('fadeIn', {
         duration: 500,
         clear: true,
         start: function() {
           setTimeout(function() {
-            $(e.target).css('opacity', '');
-          }, 550);
+            $target.css('opacity', '');
+          }, 525);
         },
         complete: function() {
-          $(e.target).css('opacity', '');
+          $target.css('opacity', '');
         }
       });
     });
 
+    /**
+     * LazySizes: Owl
+     */
+    $(document)
+      .on('lazybeforeunveil', function(e) {
+        var $target = $(e.target);
+
+        if ($target.hasClass('owl-carousel'))
+          setTimeout(function () {
+            $target.owlCarousel(e.target.owlOptions);
+          }, 0);
+      });
+
   /**
-   * LazySizes Init
+   * LazySizes: Init
    */
   lazySizes.init();
 
@@ -214,7 +341,7 @@ $(document).ready(function() {
   var navButton = $('#top-button'),
     screenHeight = $(window).height(),
     topShow = screenHeight, // hidden before (screenHeight or Number), px
-    navSpeed = 1200; // speed, ms
+    navSpeed = 1000; // speed, ms
 
   function scrollCalc() {
     var scrollOut = $(window).scrollTop();
@@ -257,7 +384,7 @@ $(document).ready(function() {
           navButton
             .removeClass('up')
             .addClass('down')
-            .attr('title', 'Back');
+            .attr('title', 'Вернуться');
           $(window).bind('scroll', scrollCalc);
         }
       );
@@ -275,7 +402,7 @@ $(document).ready(function() {
           navButton
             .removeClass('down')
             .addClass('up')
-            .attr('title', 'Top');
+            .attr('title', 'Наверх');
           $(window).bind('scroll', scrollCalc);
         }
       );

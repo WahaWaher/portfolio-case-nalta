@@ -17,6 +17,7 @@
   <!-- build:css -->
   <link rel="stylesheet" href="css/vendors~app.min.css">
   <link rel="stylesheet" href="css/app.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magic/1.1.0/magic.css"> -->
   <!-- endbuild -->
 </head>
 <body>

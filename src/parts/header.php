@@ -13,7 +13,7 @@
         </div>
         <div class="col-auto flex-grow-1 d-none d-xl-block text-center">
 
-          <nav class="menu-main">
+          <nav class="menu-main font-weight-medium">
             <ul class="menu-main__list list-empty">
               <li class="current-menu-item"><a href="/">Главная</a></li>
               <li><a href="/about">О компании</a></li>
@@ -26,7 +26,7 @@
         </div>
         <div class="col-auto d-none d-sm-block">
 
-          <button class="btn btn_transparent btn_effect_silent">
+          <button class="btn btn_transparent btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>
             <i class="aif aif-phone mr-1"></i>
             Заказать звонок
           </button>
@@ -52,7 +52,7 @@
       <div class="row d-flex align-items-center">
         <div class="col-4 d-block d-xl-none">
 
-          <button class="hamburger hamburger--slider text-middle" data-drawerToggle="mobile-menu-cat">
+          <button class="hamburger hamburger--slider text-middle mr-1" data-drawerToggle="mobile-menu-cat">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>
@@ -63,7 +63,7 @@
         </div>
         <div class="col-xl-8 d-none d-xl-block">
 
-          <nav class="menu-main text-black">
+          <nav class="menu-main font-weight-normal">
             <ul class="menu-main__list list-empty">
               <li><a href="/category">Окна</a></li>
               <li><a href="/category">Двери</a></li>
@@ -77,11 +77,19 @@
         </div>
         <div class="col-8 col-xl-4">
           <div class="row justify-content-end">
-            <div class="col-auto col-xl text-right">
+            <div class="col-auto col-xl d-none d-sm-block text-right">
 
               <a class="contact-block-min text-nowrap" href="mailto:mail@gmail.com" title="Написать">
                 <i class="aif aif-mail mr-1"></i>
                 mail@gmail.com
+              </a>
+
+            </div>
+            <div class="col-auto d-sm-none text-right">
+
+              <a class="contact-block-min font-weight-bold" data-src="#app-popup-order-const-calc" href="#app-popup-order-const-calc" data-fancybox>
+                <i class="aif aif-phone mr-1"></i>
+                Заказать звонок
               </a>
 
             </div>

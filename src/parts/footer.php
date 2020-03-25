@@ -13,16 +13,16 @@
         </div>
         <div class="col-sm-6 order-lg-1 col-lg-3 col-xl-3 mb-5 mb-lg-0">
 
-          <div class="title-3 mb-4">Заказать замер</div>
-          <p class="font-weight-light">Оставьте ваши данные, мы Вам перезвоним в ближайшее время для согласования даты и времени замера</p>
-          <button class="btn btn_effect_silent">Заказать замер</button>
+          <div class="title-3 mb-4 font-weight-bold">Заказать замер</div>
+          <p style="font-size: 0.92rem;">Оставьте ваши данные, мы Вам перезвоним в ближайшее время для согласования даты и времени замера</p>
+          <button class="btn btn_effect_silent" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
 
         </div>
         <div class="col-6 col-sm-4 col-lg-2 col-xl-2 mb-5 mb-sm-0">
 
-          <div class="title-3 mb-4">Информация</div>
+          <div class="title-3 mb-4 font-weight-bold">Информация</div>
 
-          <nav class="menu-simple font-weight-light">
+          <nav class="menu-simple font-weight-medium">
             <ul class="menu-simple__list list-empty">
               <li class="current-menu-item"><a href="/">Главная</a></li>
               <li><a href="/about">О компании</a></li>
@@ -35,9 +35,9 @@
         </div>
         <div class="col-6 col-sm-4 col-lg-2 col-xl-2 mb-5 mb-sm-0">
 
-          <div class="title-3 mb-4">Каталог</div>
+          <div class="title-3 mb-4 font-weight-bold">Каталог</div>
 
-          <nav class="menu-simple font-weight-light">
+          <nav class="menu-simple font-weight-normal">
             <ul class="menu-simple__list list-empty">
               <li><a href="/category">Окна</a></li>
               <li><a href="/category">Двери</a></li>
@@ -51,7 +51,7 @@
         </div>
         <div class="col-sm-4 col-lg-3 col-xl-2">
 
-          <div class="title-3 mb-4">Контакты</div>
+          <div class="title-3 mb-4 font-weight-bold">Контакты</div>
 
           <a class="contact-block-min text-nowrap d-block mb-3" href="tel:80297442412" title="Позвонить">
             <i class="aif aif-phone mr-1"></i>
@@ -77,14 +77,14 @@
       </div>
     </div>
     <!-- DecoCity -->
-    <img class="lazyload deco-sct-city__img" data-src="img/bg-city-rare_accent-light.png" src="img/bg-lazy.png" alt="deco city">
+    <img class="lazyload deco-sct-city__img" data-src="img/bg-city-rare_accent-light.png" src="svg/lazy.svg" alt="deco city">
   </div>
   <!-- AppFooterMain : End -->
 
   <!-- AppFooterSub : Start -->
   <div class="app-footer__sub bg-accent-light">
     <div class="container">
-      <div class="font-weight-light text-center">© 2020 Все права защищены</div>
+      <div class="text-center">© 2020 Все права защищены</div>
     </div>
   </div>
   <!-- AppFooterSub : End -->
