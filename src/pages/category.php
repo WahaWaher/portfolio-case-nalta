@@ -22,7 +22,7 @@
             </div>
             <div class="offer-main__content mb-4">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-              <button class="btn btn_effect_silent mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
+              <button class="btn btn_fx_wave mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
             </div>
           </div>
           <div>
@@ -31,7 +31,7 @@
             </div>
             <div class="offer-main__content mb-4">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-              <button class="btn btn_effect_silent mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
+              <button class="btn btn_fx_wave mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
             </div>
           </div>
           <div>
@@ -40,7 +40,7 @@
             </div>
             <div class="offer-main__content mb-4">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-              <button class="btn btn_effect_silent mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
+              <button class="btn btn_fx_wave mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
             </div>
           </div>
         </div>
@@ -78,10 +78,10 @@
           <div class="card-main__price">13 240 руб.</div>
           <div class="row flex-lg-nowrap">
             <div class="col-lg-auto flex-grow-1 pr-lg-1 mt-2">
-              <button class="btn btn_wide btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+              <button class="btn btn_wide btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
             </div>
             <div class="col-lg-auto pl-lg-1 mt-2">
-              <a class="btn btn_wide btn_transparent btn_effect_silent" href="/product">Подробнее</a>
+              <a class="btn btn_wide btn_transparent btn_fx_wave" href="/product">Подробнее</a>
             </div>
           </div>
         </div>
@@ -107,10 +107,10 @@
           <div class="card-main__price">13 240 руб.</div>
           <div class="row flex-lg-nowrap">
             <div class="col-lg-auto flex-grow-1 pr-lg-1 mt-2">
-              <button class="btn btn_wide btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+              <button class="btn btn_wide btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
             </div>
             <div class="col-lg-auto pl-lg-1 mt-2">
-              <a class="btn btn_wide btn_transparent btn_effect_silent" href="/product">Подробнее</a>
+              <a class="btn btn_wide btn_transparent btn_fx_wave" href="/product">Подробнее</a>
             </div>
           </div>
         </div>
@@ -136,10 +136,10 @@
           <div class="card-main__price">13 240 руб.</div>
           <div class="row flex-lg-nowrap">
             <div class="col-lg-auto flex-grow-1 pr-lg-1 mt-2">
-              <button class="btn btn_wide btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+              <button class="btn btn_wide btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
             </div>
             <div class="col-lg-auto pl-lg-1 mt-2">
-              <a class="btn btn_wide btn_transparent btn_effect_silent" href="/product">Подробнее</a>
+              <a class="btn btn_wide btn_transparent btn_fx_wave" href="/product">Подробнее</a>
             </div>
           </div>
         </div>
@@ -165,10 +165,10 @@
           <div class="card-main__price">13 240 руб.</div>
           <div class="row flex-lg-nowrap">
             <div class="col-lg-auto flex-grow-1 pr-lg-1 mt-2">
-              <button class="btn btn_wide btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+              <button class="btn btn_wide btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
             </div>
             <div class="col-lg-auto pl-lg-1 mt-2">
-              <a class="btn btn_wide btn_transparent btn_effect_silent" href="/product">Подробнее</a>
+              <a class="btn btn_wide btn_transparent btn_fx_wave" href="/product">Подробнее</a>
             </div>
           </div>
         </div>
@@ -194,10 +194,10 @@
           <div class="card-main__price">13 240 руб.</div>
           <div class="row flex-lg-nowrap">
             <div class="col-lg-auto flex-grow-1 pr-lg-1 mt-2">
-              <button class="btn btn_wide btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+              <button class="btn btn_wide btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
             </div>
             <div class="col-lg-auto pl-lg-1 mt-2">
-              <a class="btn btn_wide btn_transparent btn_effect_silent" href="/product">Подробнее</a>
+              <a class="btn btn_wide btn_transparent btn_fx_wave" href="/product">Подробнее</a>
             </div>
           </div>
         </div>
@@ -223,10 +223,10 @@
           <div class="card-main__price">13 240 руб.</div>
           <div class="row flex-lg-nowrap">
             <div class="col-lg-auto flex-grow-1 pr-lg-1 mt-2">
-              <button class="btn btn_wide btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+              <button class="btn btn_wide btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
             </div>
             <div class="col-lg-auto pl-lg-1 mt-2">
-              <a class="btn btn_wide btn_transparent btn_effect_silent" href="/product">Подробнее</a>
+              <a class="btn btn_wide btn_transparent btn_fx_wave" href="/product">Подробнее</a>
             </div>
           </div>
         </div>
@@ -252,10 +252,10 @@
           <div class="card-main__price">13 240 руб.</div>
           <div class="row flex-lg-nowrap">
             <div class="col-lg-auto flex-grow-1 pr-lg-1 mt-2">
-              <button class="btn btn_wide btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+              <button class="btn btn_wide btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
             </div>
             <div class="col-lg-auto pl-lg-1 mt-2">
-              <a class="btn btn_wide btn_transparent btn_effect_silent" href="/product">Подробнее</a>
+              <a class="btn btn_wide btn_transparent btn_fx_wave" href="/product">Подробнее</a>
             </div>
           </div>
         </div>
@@ -281,10 +281,10 @@
           <div class="card-main__price">13 240 руб.</div>
           <div class="row flex-lg-nowrap">
             <div class="col-lg-auto flex-grow-1 pr-lg-1 mt-2">
-              <button class="btn btn_wide btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+              <button class="btn btn_wide btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
             </div>
             <div class="col-lg-auto pl-lg-1 mt-2">
-              <a class="btn btn_wide btn_transparent btn_effect_silent" href="/product">Подробнее</a>
+              <a class="btn btn_wide btn_transparent btn_fx_wave" href="/product">Подробнее</a>
             </div>
           </div>
         </div>
@@ -310,10 +310,10 @@
           <div class="card-main__price">13 240 руб.</div>
           <div class="row flex-lg-nowrap">
             <div class="col-lg-auto flex-grow-1 pr-lg-1 mt-2">
-              <button class="btn btn_wide btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+              <button class="btn btn_wide btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
             </div>
             <div class="col-lg-auto pl-lg-1 mt-2">
-              <a class="btn btn_wide btn_transparent btn_effect_silent" href="/product">Подробнее</a>
+              <a class="btn btn_wide btn_transparent btn_fx_wave" href="/product">Подробнее</a>
             </div>
           </div>
         </div>

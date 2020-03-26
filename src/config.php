@@ -24,6 +24,21 @@ $pages = array(
     'description' => $sets['description'],
     'keywords' => $sets['keywords']
   ),
+  'about' => array(
+    'title' => 'О компании',
+    'description' => $sets['description'],
+    'keywords' => $sets['keywords']
+  ),
+  'setup' => array(
+    'title' => 'Установка',
+    'description' => $sets['description'],
+    'keywords' => $sets['keywords']
+  ),
+  'contacts' => array(
+    'title' => 'Контакты',
+    'description' => $sets['description'],
+    'keywords' => $sets['keywords']
+  ),
   'policy' => array(
     'title' => 'Политика конфиденциальности',
     'description' => $sets['description'],

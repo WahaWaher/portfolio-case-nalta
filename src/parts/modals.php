@@ -30,7 +30,7 @@
         </label>
       </div>
       <div class="col-12 mt-3">
-        <button class="btn btn_effect_silent" type="submit" onclick="return false">Заказать замер</button>
+        <button class="btn btn_fx_wave" type="submit" onclick="return false">Заказать замер</button>
       </div>
     </div>
   </form>
@@ -68,7 +68,7 @@
         </label>
       </div>
       <div class="col-12 mt-3">
-        <button class="btn btn_effect_silent" type="submit" onclick="return false">Расчитать стоимость</button>
+        <button class="btn btn_fx_wave" type="submit" onclick="return false">Расчитать стоимость</button>
       </div>
     </div>
   </form>

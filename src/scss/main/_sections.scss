@@ -21,6 +21,14 @@
     padding-top: 115px + 72px + 72px !important;
   }
 }
+@include media-breakpoint-down(md) {
+  .sct {
+    &__bg {}
+    &_under-header {
+      padding-top: 42px + 72px + 72px !important;
+    }
+  }
+}
 
 /**
  * Section: app
@@ -55,6 +63,20 @@
     min-width: 185px;
   }
 }
+@include media-breakpoint-down(md) {
+  .app-header {
+    &__main {
+      padding: 15px 0;
+      .logo-main__img {
+        max-width: 140px;
+      }
+    }
+  }
+  .app-header__sub {
+    padding: 10px 0;
+  }
+}
+
 
 /**
  * Section: app-page

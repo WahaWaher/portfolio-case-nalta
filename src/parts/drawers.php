@@ -28,7 +28,7 @@
     </ul>
   </nav>
 
-  <button class="btn btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>
+  <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>
     <i class="aif aif-phone mr-1"></i>
     Заказать звонок
   </button>
@@ -67,7 +67,7 @@
     </ul>
   </nav>
 
-  <button class="btn btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>
+  <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>
     <i class="aif aif-phone"></i>
     Заказать звонок
   </button>

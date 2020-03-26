@@ -11,24 +11,26 @@
   <div class="container">
 
     <div class="offer-main sticky-box-xs">
-      <div data-slider-main class="slider-main owl-carousel pos-static">
+      <div data-slider-main class="slider-main owl-carousel pos-static" data-owl='{
+        "loop": true
+      }'>
         <div class="mb-5">
           <h1 class="title-1">Lorem ipsum dolor sit amet consectetur! </h1>
           <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          <button class="btn btn_effect_silent mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
+          <button class="btn btn_fx_wave mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
         </div>
         <div class="mb-5">
           <h1 class="title-1">Lorem ipsum dolor sit amet consectetur! </h1>
           <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          <button class="btn btn_effect_silent mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
+          <button class="btn btn_fx_wave mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
         </div>
         <div class="mb-5">
           <h1 class="title-1">Lorem ipsum dolor sit amet consectetur! </h1>
           <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          <button class="btn btn_effect_silent mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
+          <button class="btn btn_fx_wave mt-3" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
         </div>
       </div>
     </div>
@@ -50,7 +52,7 @@
           <div class="figure-iconbox__icon mb-2">
             <i class="aif aif-medal"></i>
           </div>
-          <figcaption class="figure-iconbox__descr">
+          <figcaption class="figure-iconbox__descr font-weight-normal">
             Сертифицированные <br>партнёры ALUTECH
           </figcaption>
         </figure>
@@ -62,7 +64,7 @@
           <div class="figure-iconbox__icon mb-2">
             <i class="aif aif-shield"></i>
           </div>
-          <figcaption class="figure-iconbox__descr">
+          <figcaption class="figure-iconbox__descr font-weight-normal">
             2 года полной <br>гарантии
           </figcaption>
         </figure>
@@ -74,7 +76,7 @@
           <div class="figure-iconbox__icon mb-2">
             <i class="aif aif-four"></i>
           </div>
-          <figcaption class="figure-iconbox__descr">
+          <figcaption class="figure-iconbox__descr font-weight-normal">
             Честный онлайн <br>расчёт
           </figcaption>
         </figure>
@@ -86,7 +88,7 @@
           <div class="figure-iconbox__icon mb-2">
             <i class="aif aif-ruler"></i>
           </div>
-          <figcaption class="figure-iconbox__descr">
+          <figcaption class="figure-iconbox__descr font-weight-normal">
             Бесплатный замер <br>и консультация
           </figcaption>
         </figure>
@@ -98,7 +100,7 @@
           <div class="figure-iconbox__icon mb-2">
             <i class="aif aif-spanner"></i>
           </div>
-          <figcaption class="figure-iconbox__descr">
+          <figcaption class="figure-iconbox__descr font-weight-normal">
             Сертифицированные <br>бригады монтажников
           </figcaption>
         </figure>
@@ -110,7 +112,7 @@
           <div class="figure-iconbox__icon mb-2">
             <i class="aif aif-money"></i>
           </div>
-          <figcaption class="figure-iconbox__descr">
+          <figcaption class="figure-iconbox__descr font-weight-normal">
             Любая форма <br>оплаты
           </figcaption>
         </figure>
@@ -141,7 +143,7 @@
           </a>
           <div class="card-main__content">Цену уточняйте у менеджеров</div>
           <div class="card-main__actions">
-            <button class="btn btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+            <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
           </div>
         </div>
 
@@ -157,7 +159,7 @@
           </a>
           <div class="card-main__content">Цену уточняйте у менеджеров</div>
           <div class="card-main__actions">
-            <button class="btn btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+            <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
           </div>
         </div>
 
@@ -173,7 +175,7 @@
           </a>
           <div class="card-main__content">Цену уточняйте у менеджеров</div>
           <div class="card-main__actions">
-            <button class="btn btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+            <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
           </div>
         </div>
 
@@ -189,7 +191,7 @@
           </a>
           <div class="card-main__content">Цену уточняйте у менеджеров</div>
           <div class="card-main__actions">
-            <button class="btn btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+            <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
           </div>
         </div>
 
@@ -205,7 +207,7 @@
           </a>
           <div class="card-main__content">Цену уточняйте у менеджеров</div>
           <div class="card-main__actions">
-            <button class="btn btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+            <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
           </div>
         </div>
 
@@ -221,7 +223,7 @@
           </a>
           <div class="card-main__content">Цену уточняйте у менеджеров</div>
           <div class="card-main__actions">
-            <button class="btn btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
+            <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Оформить заказ</button>
           </div>
         </div>
 

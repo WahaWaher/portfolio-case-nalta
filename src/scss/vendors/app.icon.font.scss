@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.aif-location:before {
+  content: "\e91b";
+}
 .aif-arrow-check-up:before {
   content: "\e900";
 }

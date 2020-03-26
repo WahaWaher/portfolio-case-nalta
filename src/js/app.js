@@ -1,4 +1,146 @@
+(function($, window) {
+  // Defaults
+  var defaults = {
+    api: '',
+    lang: 'ru',
+    styles: [],
+    markerDefaults: {},
+    center: {
+      lat: 51.61801655,
+      lng: 54.93164063,
+    },
+    zoom: 16,
+    disableDefaultUI: true,
+    markers: []
+  };
+
+  // Constructor
+  var GMap = function GMap(el, options) {
+    var _ = this,
+      it = (_.it = el),
+      options = (_.options = options || {}),
+      data = (_.data = $(el).data('gmap') || {}),
+      defs = (_.defaults = defaults || {}),
+      sets = (_.settings = $.extend(true, {}, defs, options, data)),
+      map = (_.map = {});
+
+    _.checkScript();
+  };
+
+  var proto = GMap.prototype;
+
+  // Загрузка карты
+  proto.loadMap = function() {
+    var _ = this,
+      it = _.it,
+      sets = _.settings,
+      map;
+
+    // init map
+    _.map = map = new google.maps.Map(it, sets);
+
+    // init markers
+    $.each(sets.markers, function(i, marker) {
+      var ext = $.extend(true, {}, sets.markerDefaults, marker, {
+        map: map
+      });
+
+      // ext.icon.url += '#' + marker.id;
+
+      // ext.icon.size = new google.maps.Size(ext.icon.size[0], ext.icon.size[1]);
+      // ext.icon.scaledSize = new google.maps.Size(
+      //   ext.icon.scaledSize[0],
+      //   ext.icon.scaledSize[1]
+      // );
+
+      var markerObject = new google.maps.Marker(ext);
+
+      // google.maps.event.addListener(markerObject, 'mouseover', function(e) {
+      //   var current = $('img[src="' + this.icon.url + '"]');
+      //   var all = $('img[src^="' + this.icon.url.replace(/#\d{1,}/, '') + '"]');
+      //   $(it).trigger('chooseMarker.gmap', [_, current, all, this]);
+      // });
+    });
+
+    google.maps.event.addListenerOnce(map, 'idle', function() {
+      $(it).trigger('mapLoaded.gmap', [_, this]);
+    });
+  };
+
+  // Проверка загрузки скрипта
+  proto.checkScript = function() {
+    var _ = this,
+      sets = _.settings;
+
+    var script = $(
+      'script[src="https://maps.googleapis.com/maps/api/js?key=' +
+        sets.api +
+        '&language=' +
+        sets.lang +
+        '"]'
+    );
+
+    if (script.length && typeof google === 'object' && 'maps' in google) {
+      _.loadMap();
+    } else if (script.length && typeof google !== 'object') {
+      script.on('load', function() {
+        _.loadMap.call(_);
+      });
+    } else {
+      _.loadScript(sets.api, function() {
+        _.loadMap.call(_);
+      });
+    }
+  };
+
+  // Загрузка скрипта
+  proto.loadScript = function(api, callback) {
+    var _ = this,
+      sets = _.settings;
+
+    var script = $('<script/>').attr(
+      'src',
+      'https://maps.googleapis.com/maps/api/js?key=' +
+        api +
+        '&language=' +
+        sets.lang +
+        ''
+    );
+
+    script.on('load', function() {
+      if (callback && typeof callback === 'function') callback();
+    });
+
+    $('body')
+      .get(0)
+      .appendChild(script.get(0));
+  };
+
+  // jQuery Method
+  $.fn.gMap = function(options) {
+    var maps = this;
+
+    $.each(maps, function(key, map) {
+      var $map = $(map);
+      map.gMap = new GMap(map, options);
+    });
+
+    return this;
+  };
+
+  GMap.defaults = defaults;
+  window.GMap = GMap;
+})(jQuery, window);
+
 $(document).ready(function() {
+  /**
+   * GoogleMap
+   * get coords: https://www.gps-coordinates.net/
+   */
+  $('.g-map:not(.lazyload)').gMap({
+    api: 'AIzaSyBjRSvOYrqSK2hd__oTm-cjjWKIlHHXbBQ',
+  });
+
   /**
    * Fancybox basic options
    */
@@ -12,32 +154,33 @@ $(document).ready(function() {
       open: {
         name: 'magictime swap',
         duration: 500,
-        start: function () {
+        start: function() {
           $(this).css('overflow', 'hidden');
         },
-        complete: function () {
+        complete: function() {
           $(this).css('overflow', '');
         }
       },
       close: {
         name: 'magictime rotateRight',
         duration: 750,
-        start: function () {
+        start: function() {
           $(this).css('overflow', 'hidden');
         },
-        complete: function () {
+        complete: function() {
           $(this).css('overflow', '');
         }
-      },
+      }
     },
     // spinnerTpl: '<div class="loader loader_inline loader_fancybox is-active"></div>',
     lang: 'ru',
     i18n: {
-      'ru': {
+      ru: {
         CLOSE: 'Закрыть',
         NEXT: 'Далее',
         PREV: 'Назад',
-        ERROR: 'Не удалось загрузить содержимое.<br>Пожалуйста, попробуйте позже.',
+        ERROR:
+          'Не удалось загрузить содержимое.<br>Пожалуйста, попробуйте позже.',
         PLAY_START: 'Запустить слайд-шоу',
         PLAY_STOP: 'Остановить слайд-шоу',
         FULL_SCREEN: 'На весь экран',
@@ -52,7 +195,7 @@ $(document).ready(function() {
   /**
    * Rellax
    */
-  $('.rellax-box img').each(function (key, item) {
+  $('.rellax-box img').each(function(key, item) {
     item.rellax = new Rellax(item);
   });
 
@@ -61,17 +204,18 @@ $(document).ready(function() {
    */
   jcf.replace('.form-check', 'Checkbox');
 
-  $('.form-check').each(function (key, check) {
+  $('.form-check').each(function(key, check) {
     var $check = $(check);
 
     $check.parents('.jcf-checkbox').addClass($check.attr('class'));
   });
-  
 
   // Animated input placeholder
-  $('.form-group_holder_default input').on('blur', function (e) {
-    $(this)[(e.target.value ? 'add' : 'remove') + 'Class']('is-not-empty');
-  }).trigger('blur');
+  $('.form-group_holder_default input')
+    .on('blur', function(e) {
+      $(this)[(e.target.value ? 'add' : 'remove') + 'Class']('is-not-empty');
+    })
+    .trigger('blur');
 
   /**
    * SliderMain
@@ -115,7 +259,7 @@ $(document).ready(function() {
         },
         onInitialized: function() {
           $(this).fadeIn();
-        },
+        }
       },
       $slider.data('owl')
     );
@@ -127,14 +271,26 @@ $(document).ready(function() {
       var syncVal = dataSync.split(':') || [];
       var id = syncVal[0];
       var role = syncVal[1];
-      var $syncSlider = $('[data-sync="'+ id + ':' + (role === 'main' ? "prev" : "main") +'"]');
+      var $syncSlider = $(
+        '[data-sync="' + id + ':' + (role === 'main' ? 'prev' : 'main') + '"]'
+      );
     }
+
+    // OWL: OnInitialized
+    $slider.on('initialized.owl.carousel', function(e) {
+      // Refresh OFI
+      if (window.objectFitImages) {
+        setTimeout(function() {
+          objectFitImages($(e.target).find('img'), options.ofi);
+        }, 0);
+      }
+    });
 
     // OWL: OnChanged
     $slider.on('changed.owl.carousel', function(e) {
       // Refresh OFI
       if (window.objectFitImages) {
-        setTimeout(function () {
+        setTimeout(function() {
           objectFitImages($(e.target).find('img'), options.ofi);
         }, 0);
       }
@@ -147,22 +303,11 @@ $(document).ready(function() {
       }
     });
 
-    // OWL: OnInitialized
-    $slider.on('initialized.owl.carousel', function(e) {
-      // Refresh OFI
-      if (window.objectFitImages) {
-        setTimeout(function () {
-          objectFitImages($(e.target).find('img'), options.ofi);
-        }, 0);
-      }
-    });
-
     // Stick owl options to element
     slider.owlOptions = options;
 
     // Init or Lazy
-    if (!$slider.hasClass('lazyload'))
-      $slider.owlCarousel(options);
+    if (!$slider.hasClass('lazyload')) $slider.owlCarousel(options);
   });
 
   /**
@@ -249,18 +394,31 @@ $(document).ready(function() {
       });
     });
 
-    /**
-     * LazySizes: Owl
-     */
-    $(document)
-      .on('lazybeforeunveil', function(e) {
-        var $target = $(e.target);
+  /**
+   * LazySizes: Owl
+   */
+  $(document).on('lazybeforeunveil', function(e) {
+    var $target = $(e.target);
 
-        if ($target.hasClass('owl-carousel'))
-          setTimeout(function () {
-            $target.owlCarousel(e.target.owlOptions);
-          }, 0);
-      });
+    if ($target.hasClass('owl-carousel'))
+      setTimeout(function() {
+        $target.owlCarousel(e.target.owlOptions);
+      }, 0);
+  });
+
+  /**
+   * LazySizes: GoogleMaps
+   */
+  $(document).on('lazybeforeunveil', function(e) {
+    var $target = $(e.target);
+
+    if ($target.hasClass('g-map'))
+      setTimeout(function() {
+        $target.gMap({
+          api: 'AIzaSyBjRSvOYrqSK2hd__oTm-cjjWKIlHHXbBQ',
+        });
+      }, 0);
+  });
 
   /**
    * LazySizes: Init

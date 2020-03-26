@@ -45,7 +45,7 @@
             </label>
           </div>
           <div class="col-8 col-md-4 col-xl-auto flex-grow-0 mt-3 mt-xl-0">
-            <button class="btn btn_wide btn_effect_silent" type="submit" onclick="return false">Оставить заявку</button>
+            <button class="btn btn_wide btn_fx_wave" type="submit" onclick="return false">Оставить заявку</button>
           </div>
         </div>
       </form>

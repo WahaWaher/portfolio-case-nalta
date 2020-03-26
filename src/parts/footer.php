@@ -15,7 +15,7 @@
 
           <div class="title-3 mb-4 font-weight-bold">Заказать замер</div>
           <p style="font-size: 0.92rem;">Оставьте ваши данные, мы Вам перезвоним в ближайшее время для согласования даты и времени замера</p>
-          <button class="btn btn_effect_silent" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
+          <button class="btn btn_fx_wave" data-src="#app-popup-order-free-measurement" data-fancybox>Заказать замер</button>
 
         </div>
         <div class="col-6 col-sm-4 col-lg-2 col-xl-2 mb-5 mb-sm-0">

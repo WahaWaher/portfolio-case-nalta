@@ -78,7 +78,7 @@
         </div>
 
         <!-- Action -->
-        <button class="btn btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>Рассчитать стоимость</button>
+        <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Рассчитать стоимость</button>
 
       </div>
       <div class="col-md-6 col-lg-5   order-md-1 mt-5 mt-md-0">

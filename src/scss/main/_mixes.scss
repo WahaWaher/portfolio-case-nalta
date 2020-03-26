@@ -15,16 +15,6 @@
  * Mix: text
  */
 .text {
-  // Align
-  &-center {
-    text-align: center;
-  }
-  &-left {
-    text-align: left;
-  }
-  &-right {
-    text-align: right;
-  }
   // Colors
   &-accent {
     color: $accent;
@@ -34,6 +24,9 @@
   }
   &-black {
     color: $black;
+  }
+  &-grey {
+    color: $grey;
   }
   // Other
   &-nowrap {
@@ -123,6 +116,15 @@
 }
 
 /**
+ * Mix: mw
+ */
+.mw {
+  &-300 {
+    max-width: 300px;
+  }
+}
+
+/**
  * Mix: shadow-main
  */
 .shadow {
@@ -132,7 +134,7 @@
 }
 
 /**
- * OFI classes
+ * Image classes
  */
 .img-cover {
   object-fit: cover;
@@ -141,6 +143,11 @@
 .img-contain {
   object-fit: contain;
   font-family: "object-fit: contain;";
+}
+.img-full {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /**
@@ -166,4 +173,35 @@
       margin-right: -15px;
     }
   }
+}
+
+/**
+ * Mix: ...
+ */
+.fx {
+  &__box {
+    overflow: hidden;
+  }
+  &__target {
+  }
+  &:hover {
+    &__target {
+    }
+  }
+  &__target {
+    transform: scale(1);
+    transition: .3s ease-in-out;
+  }
+  &:hover {
+    .fx__target {
+      transform: scale(1.3);
+    }
+  }
+
+  &-zoomIn {
+    .fx {
+      
+    }
+  }
+
 }

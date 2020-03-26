@@ -26,7 +26,7 @@
         </div>
         <div class="col-auto d-none d-sm-block">
 
-          <button class="btn btn_transparent btn_effect_silent" data-src="#app-popup-order-const-calc" data-fancybox>
+          <button class="btn btn_transparent btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>
             <i class="aif aif-phone mr-1"></i>
             Заказать звонок
           </button>

@@ -83,8 +83,8 @@
       background-color: $accent;
     }
     &:active {}
-    &.btn_effect {
-      &_silent {
+    &.btn_fx {
+      &_wave {
         &:before {
           background-color: $accent;
         }
@@ -96,9 +96,9 @@
     }
   }
   // Effects
-  &_effect {
-    // btn_effect_silent
-    &_silent {
+  &_fx {
+    // btn_fx_wave
+    &_wave {
       transform: translateZ(0);
       overflow: hidden;
       &:before {
@@ -411,6 +411,14 @@
   //   }
   // }
 }
+@include media-breakpoint-down(md) {
+  .drawer-main {
+    padding: 15px 15px;
+    .logo-main__img {
+      max-width: 140px;
+    }
+  }
+}
 
 /**
  * Block: menu-vertical
@@ -633,6 +641,9 @@
         background: rgba($accent, .75);
       }
     }
+    &.disabled {
+      display: none;
+    }
   }
 }
 
@@ -655,9 +666,12 @@
       line-height: 1.8em;
     }
   }
+  &__title {
+
+  }
   &__descr {
     font-size: 0.9375rem;
-    font-weight: 500;
+    // font-weight: 500;
   }
 }
 
@@ -1140,6 +1154,25 @@ $line-color: rgba($primary, .15);
   &__descr {
     max-width: 250px;
   }
+  &_simple {
+    .figure-iconstep{
+      &__deco {
+        &:after {
+          left: 0;
+          right: 0;
+        }
+      }
+      &__point {
+        opacity: 0;
+      }
+      &__title {
+        max-width: none;
+      }
+      &__descr {
+        max-width: none;
+      }
+    }
+  }
 }
 
 /**
@@ -1435,5 +1468,74 @@ $line-color: rgba($primary, .15);
   .product-gallery {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+/**
+ * Block: content-imaged
+ */
+// .content-imaged {
+//   // display: flex;
+//   // min-height: 500px;
+//   &__content {}
+//   &__img {
+//     height: 100%;
+//     img {
+//       display: block;
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+// }
+
+/**
+ * Block: card-photo
+ */
+.card-photo {
+  &__img {}
+  &__content {
+    padding: 1.475rem 1.875rem;
+  }
+  &__title {}
+  &__descr {
+    line-height: 1.25;
+  }
+  &__meta {}
+}
+
+/**
+ * Block: card-contact
+ */
+.card-contact {
+  padding: 1.75rem 3.4375rem;
+  &__title {
+    margin-bottom: 0.5rem;
+    position: relative;
+    > span {
+      vertical-align: middle;
+    }
+  }
+  &__icon {
+    display: inline-block;
+    color: $primary;
+    font-size: 0.75em;
+    > * {
+      display: inline-block;
+      line-height: 0;
+    }
+    margin-right: 0.35em;
+    &_outside {
+      position: absolute;
+      top: 0.25em; left: -1.9rem;
+    }
+  }
+  &__content {
+    color: $grey;
+  }
+  &__link {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
