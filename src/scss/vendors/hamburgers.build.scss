@@ -10,5 +10,4 @@ $hamburger-layer-border-radius : 0;
 $hamburger-hover-opacity : .75;
 $hamburger-types : (slider);
 
-// Import Hamburgers lib (scss/vendors.scss)
-@import './node_modules/hamburgers/_sass/hamburgers/hamburgers';
+@import 'hamburgers/_sass/hamburgers/hamburgers';

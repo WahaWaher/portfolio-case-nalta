@@ -1,9 +1,11 @@
 /**
- * Base App styles
+ * Base: HTML, BODY
  */
 html {
   overflow-x: hidden;
   overflow-y: scroll;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
 }
 
 body {
@@ -17,8 +19,14 @@ body {
   position: relative;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 /**
- * Links
+ * Base: Misc
  */
 a {
   color: inherit;
@@ -31,22 +39,11 @@ a {
   &:active {}
 }
 
-/**
- * Elements outline
- */
 :active,
 :hover,
 :focus {
   outline: 0 !important;
   outline-offset: 0 !important;
-}
-
-/**
- * Other
- */
-b,
-strong {
-  font-weight: 700
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,9 +54,3 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
 }
-
-/**
- * Selection
- */
-// ::selection      { color: $white; background: $aColor; }
-// ::-moz-selection { color: $white; background: $aColor; }

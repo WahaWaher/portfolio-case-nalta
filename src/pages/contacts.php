@@ -41,9 +41,9 @@
 
         <div class="card-contact h-100 bg-white shadow-main">
           <h3 class="card-contact__title title-3">
-            <div class="card-contact__icon card-contact__icon_outside">
+            <span class="card-contact__icon card-contact__icon_outside">
               <i class="aif aif-location"></i>
-            </div>
+            </span>
             <span class="d-inline-block">Адрес</span>
           </h3>
           <div class="card-contact__content">
@@ -56,9 +56,9 @@
 
         <div class="card-contact h-100 bg-white shadow-main">
           <h3 class="card-contact__title title-3">
-            <div class="card-contact__icon card-contact__icon_outside">
+            <span class="card-contact__icon card-contact__icon_outside">
               <i class="aif aif-phone"></i>
-            </div>
+            </span>
             <span  class="d-inline-block">Контактные телефоны</span>
           </h3>
           <div class="card-contact__content">
@@ -74,9 +74,9 @@
 
         <div class="card-contact h-100 bg-white shadow-main">
           <h3 class="card-contact__title title-3">
-            <div class="card-contact__icon card-contact__icon_outside">
+            <span class="card-contact__icon card-contact__icon_outside">
               <i class="aif aif-mail"></i>
-            </div>
+            </span>
             <span class="d-inline-block">E-mail</span>
           </h3>
           <div class="card-contact__content">

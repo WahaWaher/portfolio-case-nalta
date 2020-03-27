@@ -54,11 +54,12 @@
 <!-- Section: Products : Start -->
 <section class="sct py-6 py-xl-7">
   <div class="container">
+
     <h2 class="title-2">Наименование категории</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed <br>do eiusmod tempor incididunt ut labore.</p>
   
     <div class="row justify-content-center mt-5">
-      <div class="col-sm-9 col-md-6 col-xl-4 my-3">
+      <div class="col-sm-9 col-md-6 col-xl-4 my-3 maw-400">
 
         <div class="card-main bg-accent-light">
           <a href="/product" class="card-main__link">
@@ -87,7 +88,7 @@
         </div>
 
       </div>
-      <div class="col-sm-9 col-md-6 col-xl-4 my-3">
+      <div class="col-sm-9 col-md-6 col-xl-4 my-3 maw-400">
 
         <div class="card-main bg-accent-light">
           <a href="/product" class="card-main__link">
@@ -320,6 +321,7 @@
 
       </div>
     </div>
+
   </div>
 </section>
 <!-- Section: Products : End -->

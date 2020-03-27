@@ -85,19 +85,18 @@
               </a>
 
             </div>
-            <div class="col-auto d-sm-none text-right">
-
-              <a class="contact-block-min font-weight-bold" data-src="#app-popup-order-const-calc" href="#app-popup-order-const-calc" data-fancybox>
-                <i class="aif aif-phone mr-1"></i>
-                Заказать звонок
-              </a>
-
-            </div>
             <div class="col-auto col-xl text-right">
 
               <a class="contact-block-min text-nowrap" href="tel:80297442412" title="Позвонить">
                 <i class="aif aif-phone mr-1"></i>
                 8 (029) 744-24-12
+              </a>
+
+            </div>
+            <div class="col-auto d-sm-none text-right">
+
+              <a class="contact-block-min font-weight-bold text-decoration-underline" data-src="#app-popup-order-const-calc" href="#app-popup-order-const-calc" data-fancybox>
+                Заказать звонок
               </a>
 
             </div>

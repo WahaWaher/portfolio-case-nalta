@@ -257,7 +257,6 @@
 .menu-main {
   &__list {
     font-size: 0;
-    // font-weight: 500;
     line-height: 0;
     > li {
       display: inline-block;
@@ -401,15 +400,6 @@
       }
     }
   }
-  // &_cat {
-  //   .menu-vertical {
-  //     &__list {
-  //       > li {
-  //         > a {}
-  //       }
-  //     }
-  //   }
-  // }
 }
 @include media-breakpoint-down(md) {
   .drawer-main {
@@ -481,27 +471,19 @@
   }
 }
 
-
-
-
-
 /**
  * Block: slider-main
  */
 .slider-main {
-  /**
-   * Owl carousel with Lazysizes
-   * appearing from zero height fix
-   */
+  // Owl carousel with Lazysizes
+  // appearing from zero height fix
   &.lazyload {
     display: block;
     height: 0;
     overflow: hidden;
   }
   &_mode {
-    /**
-     * Owl mode: slider like navigation
-     */
+    // Owl mode: slider like navigation
     &_nav {
       .owl-item {
         opacity: 0.5;
@@ -557,9 +539,7 @@
     &__next {}
   }
   &_pos {
-    /**
-     * Owl nav: centered arrows postion
-     */
+    // Owl nav: centered arrows postion
     &_center {
       .slider-nav {
         &__prev,
@@ -599,13 +579,9 @@
             font-size: 0.75rem;
             transform: translate(0);
             margin-right: 0.46875rem;
-            // background-color: rgba($accent,.85);
           }
-          &__prev {
-           
-          }
-          &__next {
-          }
+          &__prev {}
+          &__next {}
         }
       }
     }
@@ -616,7 +592,6 @@
  * Block: slider-dots
  */
 .slider-dots {
-  // default dots
   &_main {
     line-height: 0;
     .slider-dots__dot {
@@ -671,7 +646,6 @@
   }
   &__descr {
     font-size: 0.9375rem;
-    // font-weight: 500;
   }
 }
 
@@ -748,7 +722,6 @@
     line-height: 1;
     font-weight: 500;
   }
-  // &__actions {}
 }
 
 /**
@@ -824,7 +797,6 @@
   width: 1em;
   cursor: pointer;
   vertical-align: middle;
-  // border: 1px solid #ced3d2;
   border: 1px solid transparent;
   background-color: $white;
   position: relative;
@@ -859,14 +831,7 @@
   }
   &_dark {
     border-color: #ddd;
-    // background-color: #f5f5f5;
   }
-  // &_sm {
-  // }
-  // &_md {
-  // }
-  // &_lg {
-  // }
 }
 
 /**
@@ -959,7 +924,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    // transition: all $trs;
   }
   &_zoom {
     &_10 {
@@ -994,9 +958,7 @@
  */
 .app-popup {
   display: none;
-  /**
-   * Theme: Default
-   */
+  // Theme: Default
   &_theme_default {
     // Content area
     &.fancybox-content {
@@ -1010,7 +972,6 @@
       height: 30px;
       top: 10px;
       right: 10px;
-      // color: #222; // Цвет SVG
       border-radius: 50%;
       padding: 6px;
       background-color: lighten(#f5f5f5, 2%);
@@ -1470,23 +1431,6 @@ $line-color: rgba($primary, .15);
     padding-right: 0;
   }
 }
-
-/**
- * Block: content-imaged
- */
-// .content-imaged {
-//   // display: flex;
-//   // min-height: 500px;
-//   &__content {}
-//   &__img {
-//     height: 100%;
-//     img {
-//       display: block;
-//       width: 100%;
-//       height: 100%;
-//     }
-//   }
-// }
 
 /**
  * Block: card-photo

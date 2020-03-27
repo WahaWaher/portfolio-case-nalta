@@ -1,137 +1,3 @@
-(function($, window) {
-  // Defaults
-  var defaults = {
-    api: '',
-    lang: 'ru',
-    styles: [],
-    markerDefaults: {},
-    center: {
-      lat: 51.61801655,
-      lng: 54.93164063,
-    },
-    zoom: 16,
-    disableDefaultUI: true,
-    markers: []
-  };
-
-  // Constructor
-  var GMap = function GMap(el, options) {
-    var _ = this,
-      it = (_.it = el),
-      options = (_.options = options || {}),
-      data = (_.data = $(el).data('gmap') || {}),
-      defs = (_.defaults = defaults || {}),
-      sets = (_.settings = $.extend(true, {}, defs, options, data)),
-      map = (_.map = {});
-
-    _.checkScript();
-  };
-
-  var proto = GMap.prototype;
-
-  // Загрузка карты
-  proto.loadMap = function() {
-    var _ = this,
-      it = _.it,
-      sets = _.settings,
-      map;
-
-    // init map
-    _.map = map = new google.maps.Map(it, sets);
-
-    // init markers
-    $.each(sets.markers, function(i, marker) {
-      var ext = $.extend(true, {}, sets.markerDefaults, marker, {
-        map: map
-      });
-
-      // ext.icon.url += '#' + marker.id;
-
-      // ext.icon.size = new google.maps.Size(ext.icon.size[0], ext.icon.size[1]);
-      // ext.icon.scaledSize = new google.maps.Size(
-      //   ext.icon.scaledSize[0],
-      //   ext.icon.scaledSize[1]
-      // );
-
-      var markerObject = new google.maps.Marker(ext);
-
-      // google.maps.event.addListener(markerObject, 'mouseover', function(e) {
-      //   var current = $('img[src="' + this.icon.url + '"]');
-      //   var all = $('img[src^="' + this.icon.url.replace(/#\d{1,}/, '') + '"]');
-      //   $(it).trigger('chooseMarker.gmap', [_, current, all, this]);
-      // });
-    });
-
-    google.maps.event.addListenerOnce(map, 'idle', function() {
-      $(it).trigger('mapLoaded.gmap', [_, this]);
-    });
-  };
-
-  // Проверка загрузки скрипта
-  proto.checkScript = function() {
-    var _ = this,
-      sets = _.settings;
-
-    var script = $(
-      'script[src="https://maps.googleapis.com/maps/api/js?key=' +
-        sets.api +
-        '&language=' +
-        sets.lang +
-        '"]'
-    );
-
-    if (script.length && typeof google === 'object' && 'maps' in google) {
-      _.loadMap();
-    } else if (script.length && typeof google !== 'object') {
-      script.on('load', function() {
-        _.loadMap.call(_);
-      });
-    } else {
-      _.loadScript(sets.api, function() {
-        _.loadMap.call(_);
-      });
-    }
-  };
-
-  // Загрузка скрипта
-  proto.loadScript = function(api, callback) {
-    var _ = this,
-      sets = _.settings;
-
-    var script = $('<script/>').attr(
-      'src',
-      'https://maps.googleapis.com/maps/api/js?key=' +
-        api +
-        '&language=' +
-        sets.lang +
-        ''
-    );
-
-    script.on('load', function() {
-      if (callback && typeof callback === 'function') callback();
-    });
-
-    $('body')
-      .get(0)
-      .appendChild(script.get(0));
-  };
-
-  // jQuery Method
-  $.fn.gMap = function(options) {
-    var maps = this;
-
-    $.each(maps, function(key, map) {
-      var $map = $(map);
-      map.gMap = new GMap(map, options);
-    });
-
-    return this;
-  };
-
-  GMap.defaults = defaults;
-  window.GMap = GMap;
-})(jQuery, window);
-
 $(document).ready(function() {
   /**
    * GoogleMap
@@ -283,6 +149,16 @@ $(document).ready(function() {
         setTimeout(function() {
           objectFitImages($(e.target).find('img'), options.ofi);
         }, 0);
+      }
+
+      // Option: clickSlides
+      if (options.clickSlides) {
+        $(e.target).on('click', '.owl-item', function (e) {
+          var carousel = $('.owl-carousel').data('owl.carousel');
+
+          e.preventDefault();
+          carousel.to(carousel.relative($(this).index()));
+        });
       }
     });
 

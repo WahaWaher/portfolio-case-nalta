@@ -273,6 +273,7 @@
             "nav": false,
             "dots": false,
             "margin": 30,
+            "clickSlides": true,
             "responsive" : {
               "0": {
                 "items": 2

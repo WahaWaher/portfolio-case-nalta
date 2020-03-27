@@ -7,23 +7,18 @@
 
 @import '../settings';
 
-// Bootstrap-grid
 $grid-breakpoints: (
   xs: 0, // 0-575
   sm: 576px, // 576-767
   md: 768px, // 768-991
   lg: 992px, // 992-1279
   xl: 1280px, // 1280-...
-  // xxl: 1440px,
-  // xxxl: 1920px
 );
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1200px,
-  // xxl: 1380px,
-  // xxxl: 1720px
 );
 $grid-columns: 12;
 $grid-gutter-width: 30px;
@@ -41,44 +36,47 @@ $spacers: (
   7: ($spacer * 5),
 );
 
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
 
-// Removing from maps:
-// $spacers: map-remove($spacers, 0, 1, 2, 3, 4, 5);
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/utilities/display';
+@import 'bootstrap/scss/utilities/flex';
+@import 'bootstrap/scss/utilities/spacing';
 
-// Grid: parts
-html {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
+// Responsive alignment
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left {
+      text-align: left !important;
+    }
+    .text#{$infix}-right {
+      text-align: right !important;
+    }
+    .text#{$infix}-center {
+      text-align: center !important;
+    }
+  }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+// Weight and italics
+.font-weight-light {
+  font-weight: $font-weight-light !important;
+}
+.font-weight-normal {
+  font-weight: $font-weight-normal !important;
+}
+.font-weight-bold {
+  font-weight: $font-weight-bold !important;
+}
+.font-italic {
+  font-style: italic !important;
 }
 
-@import "bootstrap/scss/grid";
-@import "bootstrap/scss/utilities/display";
-@import "bootstrap/scss/utilities/flex";
-@import "bootstrap/scss/utilities/spacing";
-@import "bootstrap/scss/utilities/sizing";
-@import "bootstrap/scss/utilities/text";
-
-// Grid: full
-// @import 'bootstrap/scss/bootstrap-grid';
-
-// Utilities: Responsive text alignment
-// @each $breakpoint in map-keys($grid-breakpoints) {
-//   @include media-breakpoint-up($breakpoint) {
-//     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-//     .text#{$infix}-left   { text-align: left !important; }
-//     .text#{$infix}-right  { text-align: right !important; }
-//     .text#{$infix}-center { text-align: center !important; }
-//   }
-// }
+// Misc
+.text-decoration-none {
+  text-decoration: none !important;
+}

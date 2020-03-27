@@ -2,7 +2,7 @@
 <section class="sct py-6 py-xl-7 sct_under-header bg-white-darken-1">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-lg-7   order-md-2">
+      <div class="col-md-6 col-lg-7 order-md-2">
         
         <!-- Title -->
         <h1 class="title-2">Наименование товара</h1>
@@ -28,6 +28,13 @@
           <div class="col-lg-8">
             <b>Профиль</b>: пенонаполненный
           </div>
+        </div>
+
+        <!-- Price -->
+        <div class="title-2 my-4">
+          <small class="font-weight-light">от</small>
+          <span>13 240</span>
+          <small>руб.</small>
         </div>
 
         <!-- Advantages -->
@@ -70,18 +77,11 @@
           </div>
         </div>
 
-        <!-- Price -->
-        <div class="title-2 mb-4">
-          <small class="font-weight-light">от</small>
-          <span>13 240</span>
-          <small>руб.</small>
-        </div>
-
         <!-- Action -->
         <button class="btn btn_fx_wave" data-src="#app-popup-order-const-calc" data-fancybox>Рассчитать стоимость</button>
 
       </div>
-      <div class="col-md-6 col-lg-5   order-md-1 mt-5 mt-md-0">
+      <div class="col-md-6 col-lg-5 order-md-1 mt-5 mt-md-0">
 
         <div class="product-gallery sticky-box-xs bg-accent-light shadow-main">
           <div data-slider-main data-sync="product:main" class="slider-main owl-carousel lazyload" data-owl='{
@@ -115,17 +115,7 @@
             "nav": false,
             "dots": false,
             "margin": 30,
-            "responsive" : {
-              "_0": {
-                "items": 2
-              },
-              "_480": {
-                "items": 3
-              },
-              "_992": {
-                "items": 5
-              }
-            }
+            "clickSlides": true
           }'>
             <div class="ratio-box ratio-box_60">
               <img class="owl-lazy img-contain" data-src="../img/img-product-example.png" src="svg/lazy.svg" alt="img">

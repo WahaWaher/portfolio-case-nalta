@@ -155,7 +155,7 @@
     do eiusmod tempor incididunt ut labore.</p>
 
     <div class="row justify-content-center mt-5 mb-n3">
-      <div class="col col-sm-6 col-md-4 col-lg-3 mw-300 my-3">
+      <div class="col col-sm-6 col-md-4 col-lg-3 maw-300 my-3">
 
         <div class="card-photo shadow-main">
           <div class="card-photo__img ratio-box ratio-box_4-3">
@@ -186,7 +186,7 @@
         </div>
 
         </div>
-        <div class="col col-sm-6 col-md-4 col-lg-3 mw-300 my-3">
+        <div class="col col-sm-6 col-md-4 col-lg-3 maw-300 my-3">
 
         <div class="card-photo shadow-main">
           <div class="card-photo__img ratio-box ratio-box_4-3">
@@ -217,7 +217,7 @@
         </div>
 
         </div>
-        <div class="col col-sm-6 col-md-4 col-lg-3 mw-300 my-3">
+        <div class="col col-sm-6 col-md-4 col-lg-3 maw-300 my-3">
 
         <div class="card-photo shadow-main">
           <div class="card-photo__img ratio-box ratio-box_4-3">
@@ -248,7 +248,7 @@
         </div>
 
         </div>
-        <div class="col col-sm-6 col-md-4 col-lg-3 mw-300 my-3">
+        <div class="col col-sm-6 col-md-4 col-lg-3 maw-300 my-3">
 
         <div class="card-photo shadow-main">
           <div class="card-photo__img ratio-box ratio-box_4-3">
@@ -279,38 +279,7 @@
         </div>
 
         </div>
-      <div class="col col-sm-6 col-md-4 col-lg-3 mw-300 my-3">
-
-        <div class="card-photo shadow-main">
-          <div class="card-photo__img ratio-box ratio-box_4-3">
-            <img class="lazyload" data-src="img/photo-01.jpg" src="svg/lazy.svg" data-sizes="auto" data-srcset="
-              img/photo-01.jpg 1024w,
-              img/photo-01_768.jpg 768w,
-              img/photo-01_480.jpg 480w
-            " alt="img">
-          </div>
-          <div class="card-photo__content bg-accent-light">
-            <div class="card-photo__title title-3 mb-0">
-              Имя Фамилия
-            </div>
-            <div class="card-photo__descr text-grey mt-1">
-              Менеджер по продажам
-            </div>
-            <div class="card-photo__meta mt-4">
-              <a class="contact-block-min d-block text-nowrap mb-2" href="tel:80297442412" title="Позвонить">
-                <i class="aif aif-phone mr-1"></i>
-                8 (029) 744-24-12
-              </a>
-              <a class="contact-block-min d-block text-nowrap" href="mailto:mail@gmail.com" title="Написать">
-                <i class="aif aif-mail mr-1"></i>
-                mail@gmail.com
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="col col-sm-6 col-md-4 col-lg-3 mw-300 my-3">
+      <div class="col col-sm-6 col-md-4 col-lg-3 maw-300 my-3">
 
         <div class="card-photo shadow-main">
           <div class="card-photo__img ratio-box ratio-box_4-3">
@@ -341,7 +310,7 @@
         </div>
 
       </div>
-      <div class="col col-sm-6 col-md-4 col-lg-3 mw-300 my-3">
+      <div class="col col-sm-6 col-md-4 col-lg-3 maw-300 my-3">
 
         <div class="card-photo shadow-main">
           <div class="card-photo__img ratio-box ratio-box_4-3">
@@ -372,7 +341,38 @@
         </div>
 
       </div>
-      <div class="col col-sm-6 col-md-4 col-lg-3 mw-300 my-3">
+      <div class="col col-sm-6 col-md-4 col-lg-3 maw-300 my-3">
+
+        <div class="card-photo shadow-main">
+          <div class="card-photo__img ratio-box ratio-box_4-3">
+            <img class="lazyload" data-src="img/photo-01.jpg" src="svg/lazy.svg" data-sizes="auto" data-srcset="
+              img/photo-01.jpg 1024w,
+              img/photo-01_768.jpg 768w,
+              img/photo-01_480.jpg 480w
+            " alt="img">
+          </div>
+          <div class="card-photo__content bg-accent-light">
+            <div class="card-photo__title title-3 mb-0">
+              Имя Фамилия
+            </div>
+            <div class="card-photo__descr text-grey mt-1">
+              Менеджер по продажам
+            </div>
+            <div class="card-photo__meta mt-4">
+              <a class="contact-block-min d-block text-nowrap mb-2" href="tel:80297442412" title="Позвонить">
+                <i class="aif aif-phone mr-1"></i>
+                8 (029) 744-24-12
+              </a>
+              <a class="contact-block-min d-block text-nowrap" href="mailto:mail@gmail.com" title="Написать">
+                <i class="aif aif-mail mr-1"></i>
+                mail@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col col-sm-6 col-md-4 col-lg-3 maw-300 my-3">
 
         <div class="card-photo shadow-main">
           <div class="card-photo__img ratio-box ratio-box_4-3">

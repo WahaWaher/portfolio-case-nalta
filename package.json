@@ -1,7 +1,6 @@
 {
   "name": "nalta",
-  "version": "0.9.0",
-  "description": "",
+  "version": "1.0.0",
   "scripts": {
     "dev": "gulp dev --env=development",
     "build": "gulp build --env=production",
@@ -10,7 +9,7 @@
   "author": "WahaWaher",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^9.7.5",
     "browser-sync": "^2.26.7",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
@@ -47,7 +46,6 @@
   "dependencies": {
     "@brightleaf/animate.scss": "^3.7.1",
     "@fancyapps/fancybox": "^3.5.7",
-    "@fortawesome/fontawesome-free": "^5.12.1",
     "@wahawaher/jquery-animate-css": "^1.0.2",
     "bootstrap": "^4.4.1",
     "fancybox-animate-css": "^1.0.3",

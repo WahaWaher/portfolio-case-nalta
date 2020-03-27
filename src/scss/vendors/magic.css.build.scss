@@ -13,7 +13,7 @@ Copyright (c) 2014 Christian Pucci
 }
 @-webkit-keyframes rotateRight {
   0% {
-  	opacity: 1;
+    opacity: 1;
     -webkit-transform-origin: 0 0;
     -webkit-transform: perspective(800px) rotateY(0deg) translate3d(0px);
   }
@@ -26,7 +26,7 @@ Copyright (c) 2014 Christian Pucci
 }
 @keyframes rotateRight {
   0% {
-  	opacity: 1;
+    opacity: 1;
     transform-origin: 0 0;
     transform: perspective(800px) rotateY(0deg) translate3d(0px);
   }
@@ -51,7 +51,8 @@ Copyright (c) 2014 Christian Pucci
   100% {
     opacity: 1;
     -webkit-transform-origin: 100% 100%;
-    -webkit-transform: scale(1, 1) translate(0px, 0px);;
+    -webkit-transform: scale(1, 1) translate(0px, 0px);
+    ;
   }
 }
 @keyframes swap {
