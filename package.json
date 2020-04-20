@@ -1,5 +1,5 @@
 {
-  "name": "nalta",
+  "name": "markup-example-nalta",
   "version": "1.0.0",
   "scripts": {
     "dev": "gulp dev --env=development",
@@ -19,6 +19,7 @@
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssimport": "^7.0.0",
+    "gulp-file-include": "^2.1.1",
     "gulp-html-replace": "^1.6.2",
     "gulp-if": "^3.0.0",
     "gulp-image-resize": "^0.13.1",

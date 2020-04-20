@@ -1,4 +1,5 @@
 const { src, dest } = require('gulp');
+const fileinclude = require('gulp-file-include');
 const htmlreplace = require('gulp-html-replace');
 const rename = require('gulp-rename');
 // Configs
@@ -46,9 +47,22 @@ const layout = () => src(`${source}/layout/**/*`).pipe(dest(`${build}/layout`));
  */
 const pages = () => src(`${source}/pages/**/*`).pipe(dest(`${build}/pages`));
 
+/**
+ * Include HTML
+ */
+const includeHTML = () => {
+  return src([`${source}/page-templates/**/*.html`])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(dest(`${source}`));
+};
+
 module.exports = {
   rootPagesHTML,
   rootPagesPHP,
   layout,
   pages,
+  includeHTML,
 };

@@ -13,7 +13,7 @@ module.exports = {
     './node_modules/lazysizes/plugins/respimg/ls.respimg.js',
     './node_modules/lazysizes/lazysizes.js',
   ],
-  'jcf.bundle': [
+  'jcf.build': [
     './node_modules/jcf/dist/js/jcf.js',
     './node_modules/jcf/dist/js/jcf.checkbox.js'
   ],

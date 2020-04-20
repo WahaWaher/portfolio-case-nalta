@@ -1,15 +1,14 @@
 const config = {
   source: 'src',
-  build: 'build',
+  build: 'docs',
 
   /**
    * Development
    */
   development: {
     server: {
-      // server: 'src',
+      server: 'src',
       port: 8000,
-      proxy: 'nalta.loc',
       browser: 'chrome',
       open: false,
       notify: false,
@@ -45,9 +44,8 @@ const config = {
    */
   production: {
     server: {
-      // server: 'build',
+      // server: 'docs',
       port: 8080,
-      proxy: 'nalta.build',
       browser: 'chrome',
       open: true,
       notify: false,
@@ -62,7 +60,7 @@ const config = {
       vendors: {
         min: true,
         maps: false,
-        separate: true,
+        separate: false,
       },
     },
     js: {
@@ -73,7 +71,7 @@ const config = {
       // vendor scripts
       vendors: {
         min: true,
-        separate: true,
+        separate: false,
       },
     },
   },
