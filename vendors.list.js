@@ -26,4 +26,3 @@ module.exports = {
   'owl.carousel': './node_modules/owl.carousel/dist/owl.carousel.min.js',
   'gmap': './src/js/vendors-custom/jquery.gmap.js',
 };
-
