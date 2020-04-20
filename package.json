@@ -1,5 +1,5 @@
 {
-  "name": "markup-example-nalta",
+  "name": "portfolio-case-nalta",
   "version": "1.0.0",
   "scripts": {
     "dev": "gulp dev --env=development",
