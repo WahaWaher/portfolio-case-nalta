@@ -49,6 +49,7 @@ exports['dev'] = series(
  */
 exports['build'] = series(
   cleanBuild,
+  includeHTML,
   parallel([
     stylesApp,
     stylesVendors,

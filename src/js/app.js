@@ -39,7 +39,7 @@ $(document).ready(function() {
       }
     },
     // spinnerTpl: '<div class="loader loader_inline loader_fancybox is-active"></div>',
-    lang: 'ru',
+    lang: 'en',
     i18n: {
       ru: {
         CLOSE: 'Закрыть',
@@ -388,7 +388,7 @@ $(document).ready(function() {
         .fadeIn()
         .removeClass('down')
         .addClass('up')
-        .attr('title', 'Наверх');
+        .attr('title', 'To the top');
     if (scrollOut < topShow && navButton.attr('class') == 'up')
       navButton.fadeOut().removeClass('up down');
     if (scrollOut > topShow && navButton.attr('class') == 'down')
@@ -418,7 +418,7 @@ $(document).ready(function() {
           navButton
             .removeClass('up')
             .addClass('down')
-            .attr('title', 'Вернуться');
+            .attr('title', 'Return');
           $(window).bind('scroll', scrollCalc);
         }
       );
@@ -436,7 +436,7 @@ $(document).ready(function() {
           navButton
             .removeClass('down')
             .addClass('up')
-            .attr('title', 'Наверх');
+            .attr('title', 'To the top');
           $(window).bind('scroll', scrollCalc);
         }
       );

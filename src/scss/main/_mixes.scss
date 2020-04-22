@@ -43,22 +43,22 @@
 /**
  * Mix: font
  */
-// .font {
-//   &-weight {
-//     &-light {
-//       font-weight: 300 !important;
-//     }
-//     &-normal {
-//       font-weight: 400 !important;
-//     }
-//     &-medium {
-//       font-weight: 500 !important;
-//     }
-//     &-bold {
-//       font-weight: 700 !important;
-//     }
-//   }
-// }
+.font {
+  &-weight {
+    // &-light {
+    //   font-weight: 300 !important;
+    // }
+    // &-normal {
+    //   font-weight: 400 !important;
+    // }
+    &-medium {
+      font-weight: 500 !important;
+    }
+    // &-bold {
+    //   font-weight: 700 !important;
+    // }
+  }
+}
 
 /**
  * Mix: pos
@@ -140,6 +140,15 @@
 }
 
 /**
+ * Mix h-{}
+ */
+.h {
+  &-100 {
+    height: 100%;
+  }
+}
+
+/**
  * Mix: shadow-main
  */
 .shadow {
@@ -189,34 +198,3 @@
     }
   }
 }
-
-/**
- * Mix: ...
- */
-// .fx {
-//   &__box {
-//     overflow: hidden;
-//   }
-//   &__target {
-//   }
-//   &:hover {
-//     &__target {
-//     }
-//   }
-//   &__target {
-//     transform: scale(1);
-//     transition: .3s ease-in-out;
-//   }
-//   &:hover {
-//     .fx__target {
-//       transform: scale(1.3);
-//     }
-//   }
-
-//   &-zoomIn {
-//     .fx {
-      
-//     }
-//   }
-
-// }
